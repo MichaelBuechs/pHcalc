@@ -169,7 +169,7 @@ class Acid:
         h3o_pow = h3o**( power[::-1] )
         # Calculate a cumulative product of the Ka values. The first value
         # must be 1.0, which is why _Ka_temp is used instead of Ka.
-        Ka_prod = np.cumproduct(self._Ka_temp)
+        Ka_prod = np.cumprod(self._Ka_temp)
         # Multiply the H3O**power values times the cumulative Ka product.
         h3o_Ka = h3o_pow*Ka_prod
 
